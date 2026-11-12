@@ -1,0 +1,80 @@
+/* Elzemity branding + readable hero. Existing video and animation remain unchanged. */
+.site-header .brand-logo{width:68px;height:68px;max-width:68px;object-fit:contain;border-radius:4px}
+.footer-brand .brand-logo{width:92px;height:92px;object-fit:contain;border-radius:4px}
+body.admin .admin-bar .brand-logo{width:70px;height:70px;object-fit:contain;border-radius:4px}
+@media(max-width:650px){.site-header .brand-logo{width:49px;height:49px;max-width:49px}body.admin .admin-bar .brand-logo{width:52px;height:52px}}
+.page[data-page="home"] .hero::before{background:linear-gradient(90deg,rgba(8,7,6,.91) 0%,rgba(8,7,6,.78) 28%,rgba(8,7,6,.35) 60%,rgba(8,7,6,.08) 100%) !important}
+html[dir="rtl"] .page[data-page="home"] .hero::before{background:linear-gradient(270deg,rgba(8,7,6,.91) 0%,rgba(8,7,6,.78) 28%,rgba(8,7,6,.35) 60%,rgba(8,7,6,.08) 100%) !important}
+.page[data-page="home"] .hero-copy,html[dir="rtl"] .page[data-page="home"] .hero-copy{width:min(100%,720px) !important;padding-inline:clamp(24px,6vw,90px) !important;text-shadow:0 2px 16px rgba(0,0,0,.45)}
+.page[data-page="home"] .hero-copy h1{font-size:clamp(42px,5.2vw,76px);line-height:1.18;max-width:680px}
+html[dir="rtl"] .page[data-page="home"] .hero-copy h1{font-size:clamp(38px,4.5vw,65px);line-height:1.35}
+.page[data-page="home"] .hero-copy .hero-description{max-width:470px;line-height:1.85}
+.page[data-page="home"] .hero-copy .button{text-shadow:none}
+@media(max-width:650px){.page[data-page="home"] .hero::before,html[dir="rtl"] .page[data-page="home"] .hero::before{background:linear-gradient(180deg,rgba(8,7,6,.83),rgba(8,7,6,.64) 62%,rgba(8,7,6,.2)) !important}.page[data-page="home"] .hero-copy h1,html[dir="rtl"] .page[data-page="home"] .hero-copy h1{font-size:clamp(36px,9vw,48px)}}
+
+/* Transparent logos: no backing, border or shadow. */
+.site-header .brand-logo,.footer-brand .brand-logo,body.admin .admin-bar .brand-logo{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+
+/* Mobile storefront header: centered brand, language next to menu, favorites in drawer. */
+@media (max-width: 650px) {
+  .site-header {
+    display: flex;
+    direction: ltr;
+    justify-content: flex-start;
+    align-items: center;
+    position: sticky;
+    padding-inline: 10px;
+    gap: 0;
+  }
+  .site-header .brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 1;
+  }
+  .site-header .header-actions {
+    display: flex;
+    direction: ltr;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1px;
+    margin: 0;
+  }
+  .site-header .favorites-header-link { display: none !important; }
+  .site-header .mobile-menu-button {
+    display: inline-grid;
+    place-items: center;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 36px;
+    padding: 4px;
+    z-index: 3;
+  }
+  .site-header .header-actions .lang-toggle {
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 30px;
+    padding: 4px 7px;
+    z-index: 3;
+  }
+  .site-header .header-actions #searchToggle { min-width: 33px; width: 33px; padding: 4px; }
+  .site-header .account-icon-button { width: 31px; padding: 4px; }
+  .site-header .cart-trigger { min-width: 32px; min-height: 36px; padding: 4px; }
+  .site-header .desktop-nav.mobile-open { direction: inherit; }
+  html[dir="rtl"] .site-header .desktop-nav.mobile-open { direction: rtl; }
+}
+@media (max-width: 360px) {
+  .site-header .header-actions #searchToggle { min-width: 29px; width: 29px; }
+  .site-header .account-icon-button { width: 28px; }
+  .site-header .cart-trigger { min-width: 29px; }
+  .site-header .header-actions .lang-toggle { right: 44px; padding-inline: 5px; }
+  .site-header .mobile-menu-button { right: 6px; }
+}
